@@ -1,0 +1,230 @@
+.editorial-section {
+  padding: 80px 6%;
+  background: #f8f6f2;
+  color: #20201e;
+  font-family: Arial, sans-serif;
+}
+
+.editorial-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 35px;
+  margin-bottom: 40px;
+}
+
+.editorial-label {
+  margin-bottom: 18px;
+  color: #77736d;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.editorial-header h2 {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: clamp(38px, 5vw, 66px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.editorial-header h2 span {
+  color: #8d7965;
+  font-style: italic;
+}
+
+.editorial-description {
+  max-width: 340px;
+  margin: 0 0 5px;
+  color: #77736d;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.editorial-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-rows: 390px 330px;
+  gap: 18px;
+}
+
+.editorial-card {
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  border-radius: 3px;
+  background: #d9d5cf;
+  isolation: isolate;
+}
+
+.editorial-card.fashion {
+  grid-row: span 1;
+}
+
+.editorial-card.kitchen {
+  grid-row: span 1;
+}
+
+.editorial-card.shoes {
+  grid-column: 1;
+}
+
+.editorial-card.tech {
+  grid-column: 2;
+}
+
+.editorial-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+  z-index: -2;
+}
+
+.editorial-card:hover .editorial-image {
+  transform: scale(1.06);
+}
+
+.editorial-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  color: #fff;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.25) 0%,
+    transparent 35%,
+    rgba(0, 0, 0, 0.72) 100%
+  );
+}
+
+.editorial-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.editorial-card-bottom {
+  max-width: 380px;
+}
+
+.editorial-brand {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.editorial-card h3 {
+  margin: 0 0 22px;
+  white-space: pre-line;
+  font-family: Georgia, serif;
+  font-size: clamp(30px, 3.5vw, 46px);
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.editorial-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+  transition: gap 0.3s ease;
+}
+
+.editorial-link:hover {
+  gap: 26px;
+}
+
+.editorial-link span {
+  font-size: 18px;
+}
+
+.editorial-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 25px;
+  padding-top: 18px;
+  border-top: 1px solid #dedad3;
+  color: #77736d;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .editorial-section {
+    padding: 55px 5%;
+  }
+
+  .editorial-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .editorial-description {
+    max-width: 500px;
+  }
+
+  .editorial-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 330px 300px;
+    gap: 12px;
+  }
+
+  .editorial-overlay {
+    padding: 16px;
+  }
+
+  .editorial-card h3 {
+    font-size: 30px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .editorial-section {
+    padding: 40px 16px;
+  }
+
+  .editorial-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 330px);
+    gap: 14px;
+  }
+
+  .editorial-card.fashion,
+  .editorial-card.kitchen,
+  .editorial-card.shoes,
+  .editorial-card.tech {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .editorial-card h3 {
+    font-size: 38px;
+  }
+
+  .editorial-footer {
+    flex-direction: column;
+    line-height: 1.8;
+  }
+}

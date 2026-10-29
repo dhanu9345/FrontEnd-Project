@@ -1,0 +1,172 @@
+.tech-tunnel {
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  position: relative;
+  overflow: hidden;
+  background: #080d1c;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+  isolation: isolate;
+}
+
+.tunnel-grid {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    #34415f 1px,
+    transparent 1px
+  );
+  background-size: 28px 28px;
+  opacity: 0.5;
+}
+
+.tunnel-ring {
+  position: absolute;
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+
+.tunnel-ring-one {
+  width: 45vmin;
+}
+
+.tunnel-ring-two {
+  width: 75vmin;
+  border-style: dashed;
+  opacity: 0.6;
+}
+
+.tunnel-heading {
+  position: absolute;
+  z-index: 10;
+  text-align: center;
+  pointer-events: none;
+  padding: 20px;
+}
+
+.tunnel-heading p {
+  color: #38bdf8;
+  font-size: 12px;
+  letter-spacing: 5px;
+  margin-bottom: 18px;
+}
+
+.tunnel-heading h1 {
+  font-size: clamp(48px, 8vw, 110px);
+  font-weight: 900;
+  letter-spacing: -4px;
+  margin: 0;
+}
+
+.tunnel-heading h1 span {
+  color: #38bdf8;
+}
+
+.tunnel-heading h3 {
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: #a8b3c9;
+  margin-top: 20px;
+}
+
+.tunnel-cards {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+
+.tunnel-card {
+  position: absolute;
+  width: clamp(140px, 18vw, 240px);
+  aspect-ratio: 4 / 5;
+  left: 50%;
+  top: 50%;
+  margin-left: -120px;
+  margin-top: -150px;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid rgba(125, 211, 252, 0.4);
+  background: #151e31;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+  transform-style: preserve-3d;
+}
+
+.tunnel-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tunnel-card-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 18px 10px 12px;
+  box-sizing: border-box;
+  font-size: 12px;
+  letter-spacing: 1px;
+  background: linear-gradient(
+    transparent,
+    rgba(0, 0, 0, 0.9)
+  );
+}
+
+.tunnel-footer {
+  position: absolute;
+  bottom: 35px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #9ca9c2;
+  font-size: 11px;
+  letter-spacing: 4px;
+}
+
+.tunnel-arrow {
+  color: #38bdf8;
+  font-size: 25px;
+}
+
+.tunnel-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #202b42;
+  z-index: 20;
+}
+
+.tunnel-progress div {
+  height: 100%;
+  background: #38bdf8;
+}
+
+@media (max-width: 600px) {
+  .tech-tunnel {
+    min-height: 550px;
+  }
+
+  .tunnel-heading h1 {
+    letter-spacing: -2px;
+  }
+
+  .tunnel-heading p {
+    letter-spacing: 2px;
+  }
+
+  .tunnel-card {
+    width: 145px;
+    margin-left: -72px;
+    margin-top: -90px;
+  }
+}

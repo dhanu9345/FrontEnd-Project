@@ -1,0 +1,190 @@
+/* .signcontainer {
+    width: 400px;
+    margin: 60px auto;
+    padding: 30px;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.signcontainer h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.signcontainer form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.signcontainer input {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    font-size: 15px;
+    outline: none;
+}
+
+.signcontainer input:focus {
+    border-color: #ffbd63;
+}
+
+.signcontainer button {
+    padding: 12px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #ffbd63;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.signcontainer button:hover {
+    background-color: #f5a943;
+} */
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+.signcontainer {
+    width: calc(100% - 30px);
+    max-width: 420px;
+    margin: 40px auto;
+    padding: 28px 30px;
+
+    background: linear-gradient(
+        135deg,
+        rgba(30, 44, 65, 0.96),
+        rgba(10, 19, 35, 0.97),
+        rgba(80, 39, 20, 0.7)
+    );
+
+    border: 1px solid rgba(255, 155, 51, 0.75);
+    border-radius: 20px;
+
+    box-shadow:
+        0 0 22px rgba(255, 135, 24, 0.18),
+        0 0 45px rgba(255, 135, 24, 0.10),
+        inset 0 0 20px rgba(255, 255, 255, 0.025);
+
+    backdrop-filter: blur(18px);
+    color: #fff;
+    font-family: Arial, sans-serif;
+
+    animation: signupAppear 0.6s ease;
+}
+
+.signcontainer h2 {
+    margin: 0 0 24px;
+    color: #f8faff;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.signcontainer form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.signcontainer input {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+
+    border: 1px solid #47546a;
+    border-radius: 10px;
+    outline: none;
+
+    background: rgba(10, 23, 43, 0.9);
+    color: #fff;
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.signcontainer input::placeholder {
+    color: #aebbd0;
+}
+
+.signcontainer input:focus {
+    border-color: #ff9d20;
+    box-shadow: 0 0 10px rgba(255, 153, 25, 0.2);
+}
+
+.signcontainer button {
+    width: 100%;
+    height: 48px;
+    margin-top: 5px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: linear-gradient(100deg, #ffad19, #ff820b);
+    color: #081426;
+
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+
+    box-shadow: 0 6px 18px rgba(255, 135, 10, 0.2);
+    transition: 0.3s;
+}
+
+.signcontainer button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 9px 24px rgba(255, 135, 10, 0.35);
+}
+
+@keyframes signupAppear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .signcontainer {
+        margin: 25px auto;
+        padding: 25px 22px;
+    }
+
+    .signcontainer h2 {
+        font-size: 25px;
+    }
+}
+
+
+.signup-page {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px;
+
+    background:
+        radial-gradient(ellipse at 0% 30%, #71300d 0%, transparent 30%),
+        radial-gradient(ellipse at 100% 35%, #873608 0%, transparent 30%),
+        linear-gradient(135deg, #020b1a, #101b2e 50%, #020b1a);
+}

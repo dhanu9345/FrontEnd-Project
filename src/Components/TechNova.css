@@ -1,0 +1,185 @@
+/* Main Page */
+.technova-page {
+    padding: 40px 6%;
+    min-height: 100vh;
+    background: #f8f9fb;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.technova-page h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #172033;
+    margin: 0 0 10px;
+}
+
+.technova-subtitle {
+    text-align: center;
+    color: #777;
+    font-size: 16px;
+    margin: 0 0 35px;
+}
+
+/* Product Grid */
+.technova-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+    align-items: stretch;
+}
+
+/* Product Card */
+.technova-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: 100%;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.technova-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
+}
+
+/* Laptop Image */
+.technova-card img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    padding: 15px;
+    object-fit: contain;
+    box-sizing: border-box;
+}
+
+/* Product Details */
+.technova-details {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 18px;
+    box-sizing: border-box;
+}
+
+.technova-details h3 {
+    min-height: 28px;
+    margin: 0 0 12px;
+    color: #172033;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.technova-details p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0 0 12px;
+}
+
+/* Description */
+.technova-details p:nth-of-type(1) {
+    min-height: 45px;
+}
+
+/* Rating */
+.technova-details p:nth-of-type(2) {
+    min-height: 24px;
+}
+
+/* Price */
+.technova-price {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto;
+    margin-bottom: 18px;
+    color: #172033;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.technova-price span {
+    color: #ff303b;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Button */
+.technova-button {
+    display: block;
+    width: 100%;
+    min-height: 52px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #172033;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.3s ease;
+}
+
+.technova-button:hover {
+    background: #e63946;
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+    .technova-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+/* Small Tablet */
+@media (max-width: 768px) {
+    .technova-page {
+        padding: 30px 4%;
+    }
+
+    .technova-page h1 {
+        font-size: 30px;
+    }
+
+    .technova-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .technova-card img {
+        height: 210px;
+    }
+
+    .technova-details {
+        padding: 14px;
+    }
+
+    .technova-details h3 {
+        font-size: 17px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .technova-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .technova-card img {
+        height: 260px;
+    }
+
+    .technova-details {
+        padding: 18px;
+    }
+}

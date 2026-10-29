@@ -1,0 +1,59 @@
+.styleaura-page {
+  padding: 30px;
+  text-align: center;
+}
+
+.dress-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.dress-card {
+  overflow: hidden;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+  text-align: left;
+}
+
+.dress-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.dress-details {
+  padding: 15px;
+}
+
+.dress-details h3 {
+  margin: 0 0 10px;
+}
+
+.dress-details p {
+  margin: 8px 0;
+}
+
+.dress-details button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: black;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .dress-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .dress-container {
+    grid-template-columns: 1fr;
+  }
+}

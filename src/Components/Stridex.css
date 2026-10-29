@@ -1,0 +1,186 @@
+/* Main Page */
+.stridex-page {
+    padding: 40px 6%;
+    min-height: 100vh;
+    background: #f8f9fb;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.stridex-page h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #172033;
+    margin: 0 0 10px;
+}
+
+.stridex-subtitle {
+    text-align: center;
+    color: #777;
+    margin: 0 0 35px;
+}
+
+/* Product Grid */
+.stridex-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+    align-items: stretch;
+}
+
+/* Product Card */
+.stridex-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-width: 0;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.stridex-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
+}
+
+/* Product Image */
+.stridex-card img {
+    display: block;
+    width: 100%;
+    height: 265px;
+    padding: 15px;
+    object-fit: contain;
+    box-sizing: border-box;
+}
+
+/* Product Details */
+.stridex-details {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 18px;
+    box-sizing: border-box;
+}
+
+.stridex-details h3 {
+    font-size: 20px;
+    line-height: 1.4;
+    color: #172033;
+    margin: 0 0 12px;
+    min-height: 28px;
+}
+
+.stridex-details p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #666;
+    margin: 0 0 12px;
+}
+
+/* Description: same height for every card */
+.stridex-details p:nth-of-type(1) {
+    min-height: 45px;
+}
+
+/* Rating */
+.stridex-details p:nth-of-type(2) {
+    min-height: 24px;
+    margin-bottom: 12px;
+}
+
+/* Price */
+.stridex-price {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 23px;
+    font-weight: bold;
+    color: #172033;
+    margin-top: auto;
+    margin-bottom: 18px;
+}
+
+.stridex-price span {
+    font-size: 13px;
+    font-weight: 600;
+    color: #ff303b;
+}
+
+/* See More Button */
+.stridex-button {
+    display: block;
+    width: 100%;
+    min-height: 52px;
+    margin-top: 0;
+    padding: 14px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 8px;
+    background: #172033;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.stridex-button:hover {
+    background: #e63946;
+}
+
+/* Tablet */
+@media (max-width: 1100px) {
+    .stridex-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+/* Small Tablet */
+@media (max-width: 768px) {
+    .stridex-page {
+        padding: 30px 4%;
+    }
+
+    .stridex-page h1 {
+        font-size: 30px;
+    }
+
+    .stridex-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .stridex-card img {
+        height: 210px;
+    }
+
+    .stridex-details {
+        padding: 14px;
+    }
+
+    .stridex-details h3 {
+        font-size: 17px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .stridex-grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .stridex-card img {
+        height: 260px;
+    }
+
+    .stridex-details {
+        padding: 18px;
+    }
+}
