@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { CartContext } from "../context/cardcontext.jsx";
-import "./Cart.css";
+import "./cart.css";
 
 export default function Cart() {
     let { cart, removeFromCart, changeCartQuantity, cartTotal } =

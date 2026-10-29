@@ -1,6 +1,6 @@
 import { useEffect, useState, useContext } from "react";
 import { CartContext } from "../context/cardcontext.jsx"
-import "./StrideX.css";
+import "./Stridex.css";
 
 export default function StrideX() {
     let [products, setProducts] = useState([]);
