@@ -11,7 +11,7 @@ import StrideX from "./Components/Stridex";
 import TechNova from "./Components/TechNova";
 import { CartProvider } from "./context/cardcontext.jsx";
 import Cart from "./Components/cart.jsx";
-import Contact from "./Components/contact.jsx";
+import Contact from "./Components/Contact.jsx";
 import Profile from "./Components/Profile.jsx";
 
 export default function App() {
